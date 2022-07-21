@@ -12,6 +12,12 @@ class PageTwo extends StatefulWidget {
 class _PageTwoState extends State<PageTwo> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: const Text('我是page_two页面')),
+      body: const Padding(
+        padding: EdgeInsets.all(24),
+        child: Text("我是page_two页面，没有路由参数传值"),
+      ),
+    );
   }
 }
