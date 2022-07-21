@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/data_type.dart';
 import 'package:first_flutter_app/router_study/page_one.dart';
 import 'package:flutter/material.dart';
 
@@ -80,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              DataType(),
               TextButton(
                 onPressed: () {
                   // 导航到page_one路由
