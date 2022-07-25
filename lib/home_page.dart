@@ -43,45 +43,51 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              DataType(),
-              TextButton(
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: DefaultTextStyle(
+        style: const TextStyle(fontSize: 24, color: Colors.green),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            DataType(),
+            TextButton(
+              onPressed: () {
+                // 导航到page_one路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const PageOne(
+                    text: '我是上一个路由传过来的值, 跳转page_one',
+                  );
+                }));
+              },
+              child: const Text("点击跳转到page_one页面(非命名路由跳转方式)"),
+            ),
+            TextButton(
                 onPressed: () {
-                  // 导航到page_one路由
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const PageOne(
-                      text: '我是上一个路由传过来的值, 跳转page_one',
-                    );
-                  }));
+                  // Navigator.pushNamed(context, 'page_one');
+                  Navigator.of(context).pushNamed('page_one_params',
+                      arguments: '我是上一个路由传过来的值，通过命名参数传值');
                 },
-                child: const Text("点击跳转到page_one页面(非命名路由跳转方式)",
-                    style: TextStyle(fontSize: 18)),
+                child: const Text("点击跳转到page_one_params页面（通过命名路由跳转）")),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'page_two');
+              },
+              child: const Text(
+                "点击跳转到page_two页面（通过命名路由跳转）",
               ),
-              TextButton(
-                  onPressed: () {
-                    // Navigator.pushNamed(context, 'page_one');
-                    Navigator.of(context).pushNamed('page_one_params',
-                        arguments: '我是上一个路由传过来的值，通过命名参数传值');
-                  },
-                  child: const Text("点击跳转到page_one_params页面（通过命名路由跳转）")),
-              TextButton(
+            ),
+            TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, 'page_two');
+                  Navigator.pushNamed(context, 'basic_components_study');
                 },
-                child: const Text("点击跳转到page_two页面（通过命名路由跳转）",
-                    style: TextStyle(fontSize: 16)),
-              )
-            ],
-          ),
-        ) // This trailing comma makes auto-formatting nicer for build methods.
-        );
+                child: const Text('基础组件学习'))
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -16,7 +16,7 @@ class PageOneParams extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: Text(
           text,
-          style: TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24),
         ),
       ),
     );

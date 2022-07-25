@@ -1,6 +1,7 @@
 import 'package:first_flutter_app/home_page.dart';
 import 'package:first_flutter_app/router_study/page_one.dart';
 import 'package:flutter/material.dart';
+import 'components_study/basic_components.dart';
 import 'router_study/page_one_params.dart';
 import 'router_study/page_two.dart';
 
@@ -36,8 +37,17 @@ class MyApp extends StatelessWidget {
           return PageOneParams(
               text: ModalRoute.of(context)!.settings.arguments.toString());
         },
-        'page_two': (context) => const PageTwo()
+        'page_two': (context) => const PageTwo(),
+        'basic_components_study': (context) => const BasicComponents()
       },
+      // TODO: 路由生成钩子未学习
+      // onGenerateRoute: (RouteSettings settings) {
+      //   return MaterialPageRoute(builder: (context) {
+      //     String routeName = settings.name;
+      //     // 如果访问的路由页需要登录，但当前未登录，则直接返回登录页路由，
+      //     // 引导用户登录；其它情况则正常打开路由。
+      //   });
+      // },
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
