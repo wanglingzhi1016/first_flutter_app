@@ -1,4 +1,5 @@
-import 'package:first_flutter_app/wedget_status_parentToChild/child.dart';
+import 'package:first_flutter_app/wedget_status_parentToChild/child_full.dart';
+import 'package:first_flutter_app/wedget_status_parentToChild/child_less.dart';
 import 'package:flutter/material.dart';
 
 class ParentWidget extends StatefulWidget {
@@ -9,21 +10,37 @@ class ParentWidget extends StatefulWidget {
 }
 
 class _ParentWidgetState extends State<ParentWidget> {
-  bool _active = false;
+  bool _activeB = false;
+  bool _activeC = false;
 
   void _handleTapboxChanged(bool newValue) {
     setState(() {
-      _active = newValue;
+      _activeB = newValue;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: TapboxB(
-        active: _active,
-        onChanged: _handleTapboxChanged,
-      ),
-    );
+        child: Column(
+      children: [
+        TapboxB(
+          active: _activeB,
+          onChanged: (val) {
+            setState(() {
+              _activeB = val;
+            });
+          },
+        ),
+        TapboxC(
+          active: _activeC,
+          onChanged: (val) {
+            setState(() {
+              _activeC = val;
+            });
+          },
+        )
+      ],
+    ));
   }
 }

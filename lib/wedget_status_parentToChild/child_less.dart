@@ -12,14 +12,14 @@ class TapboxB extends StatelessWidget {
     return GestureDetector(
       onTap: _handleTap,
       child: Container(
-        width: 200,
-        height: 200,
+        width: 100,
+        height: 100,
         decoration:
             BoxDecoration(color: active ? Colors.lightGreen : Colors.grey),
         child: Center(
           child: Text(
             active ? 'Active1' : 'Inactive1',
-            style: const TextStyle(fontSize: 32, color: Colors.white),
+            style: const TextStyle(fontSize: 22, color: Colors.white),
           ),
         ),
       ),

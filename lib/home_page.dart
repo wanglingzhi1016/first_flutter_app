@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/wedget_status_parentToChild/parent.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter_app/data_type.dart';
 import 'package:first_flutter_app/router_study/page_one.dart';
@@ -54,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             DataType(),
+            ParentWidget(),
             TextButton(
               onPressed: () {
                 // 导航到page_one路由
