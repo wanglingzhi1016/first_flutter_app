@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/components_study/layout_components.dart';
 import 'package:first_flutter_app/home_page.dart';
 import 'package:first_flutter_app/router_study/page_one.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,8 @@ class MyApp extends StatelessWidget {
               text: ModalRoute.of(context)!.settings.arguments.toString());
         },
         'page_two': (context) => const PageTwo(),
-        'basic_components_study': (context) => const BasicComponents()
+        'basic_components_study': (context) => const BasicComponents(),
+        'Layout_components_study': (context) => const LayoutComponents()
       },
       // TODO: 路由生成钩子未学习
       // onGenerateRoute: (RouteSettings settings) {
