@@ -83,7 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, 'container_components_study');
                 },
-                child: const Text('容器类组件学习'))
+                child: const Text('容器类组件学习')),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'scroll_components_study');
+                },
+                child: const Text('可滚动组件学习'))
           ],
         ),
       ),

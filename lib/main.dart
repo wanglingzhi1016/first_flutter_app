@@ -1,5 +1,6 @@
 import 'package:first_flutter_app/components_study/container_components.dart';
 import 'package:first_flutter_app/components_study/layout_components.dart';
+import 'package:first_flutter_app/components_study/scroll_components.dart';
 import 'package:first_flutter_app/home_page.dart';
 import 'package:first_flutter_app/router_study/page_one.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,8 @@ class MyApp extends StatelessWidget {
         'basic_components_study': (context) => const BasicComponents(),
         'Layout_components_study': (context) => const LayoutComponents(),
         'container_components_study': (context) =>
-            const ContainerComponentStudy()
+            const ContainerComponentStudy(),
+        'scroll_components_study': (context) => const ScrollComponents(),
       },
       // TODO: 路由生成钩子未学习
       // onGenerateRoute: (RouteSettings settings) {

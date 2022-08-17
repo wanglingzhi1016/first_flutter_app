@@ -26,7 +26,7 @@ class _LayoutComponentsState extends State<LayoutComponents> {
                 minWidth: double.infinity, minHeight: 50.0),
             child: Container(
               height: 5.0,
-              child: redBox,
+              child: _blueBox(),
             ),
           ),
           SizedBox(
@@ -160,4 +160,11 @@ class _LayoutComponentsState extends State<LayoutComponents> {
     decoration: BoxDecoration(color: Colors.red),
     child: Text('ConstrainedBox、SizedBox'),
   );
+  // 使用方法传进去，会热更新
+  _blueBox() {
+    return const DecoratedBox(
+      decoration: BoxDecoration(color: Colors.yellow),
+      child: Text('ConstrainedBox、SizedBox'),
+    );
+  }
 }
