@@ -38,11 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: DefaultTextStyle(
         style: const TextStyle(fontSize: 24, color: Colors.green),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: ListView(
           children: [
             DataType(),
-            ParentWidget(),
+            const ParentWidget(),
             TextButton(
               onPressed: () {
                 // 导航到page_one路由
@@ -88,7 +87,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, 'scroll_components_study');
                 },
-                child: const Text('可滚动组件学习'))
+                child: const Text('可滚动组件学习')),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'fun_components_study');
+                },
+                child: const Text('功能性组件学习'))
           ],
         ),
       ),
