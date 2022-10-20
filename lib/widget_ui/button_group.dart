@@ -14,6 +14,9 @@ class ButtonGroup extends StatelessWidget {
   final VoidCallback onReset;
   final VoidCallback onConfirm;
 
+  final double btWidth = 174; // 按钮宽度
+  final double btHeight = 44; // 按钮高度
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,7 +24,7 @@ class ButtonGroup extends StatelessWidget {
       children: [
         OutlinedButton(
           style: ButtonStyle(
-              fixedSize: MaterialStateProperty.all(const Size(142, 44)),
+              fixedSize: MaterialStateProperty.all(Size(btWidth, btHeight)),
               side: MaterialStateProperty.all(
                   const BorderSide(width: 1, color: Color(0xFFBFBFBF))),
               shape: MaterialStateProperty.all(const RoundedRectangleBorder(
@@ -38,7 +41,7 @@ class ButtonGroup extends StatelessWidget {
             style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all(const Color(0xFF006EFE)),
-                fixedSize: MaterialStateProperty.all(const Size(142, 44)),
+                fixedSize: MaterialStateProperty.all(Size(btWidth, btHeight)),
                 elevation: MaterialStateProperty.all(0),
                 shape: MaterialStateProperty.all(const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(

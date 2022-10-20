@@ -19,8 +19,8 @@ class _WidgetUiDemoState extends State<WidgetUiDemo> {
         padding: const EdgeInsets.all(12),
         children: [
           ButtonGroup(
-              resetText: '查询1',
-              confirmText: '确定1',
+              resetText: '查询查询查询',
+              confirmText: '确定',
               onReset: () {
                 print('点击查询按钮');
               },
