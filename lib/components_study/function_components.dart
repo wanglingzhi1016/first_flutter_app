@@ -157,6 +157,7 @@ class _FunComponentsState extends State<FunComponents> {
               const ListTile(
                 title: Text('请选择'),
               ),
+              //Expand高度撑满, FractionallySizedBox宽度撑满一行
               Expanded(
                   child: ListView.builder(
                       itemCount: 30,

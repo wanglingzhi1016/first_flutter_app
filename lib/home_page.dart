@@ -92,7 +92,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, 'fun_components_study');
                 },
-                child: const Text('功能性组件学习'))
+                child: const Text('功能性组件学习')),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'Widget_ui_demo');
+                },
+                child: const Text('组件库Demo'))
           ],
         ),
       ),
