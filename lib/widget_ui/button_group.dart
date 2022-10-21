@@ -51,7 +51,7 @@ class ButtonGroup extends StatelessWidget {
             child: Text(
               confirmText,
               style: const TextStyle(fontSize: 16),
-            )),
+            ))
       ],
     );
   }

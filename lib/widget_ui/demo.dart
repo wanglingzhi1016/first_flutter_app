@@ -1,4 +1,5 @@
 import 'package:first_flutter_app/widget_ui/button_group.dart';
+import 'package:first_flutter_app/widget_ui/drawer/header.dart';
 import 'package:flutter/material.dart';
 
 class WidgetUiDemo extends StatefulWidget {
@@ -26,7 +27,29 @@ class _WidgetUiDemoState extends State<WidgetUiDemo> {
               },
               onConfirm: () {
                 print('点击了确定按钮');
-              })
+              }),
+          Container(
+            height: 300,
+            padding: const EdgeInsets.all(4),
+            color: Colors.grey,
+            child: ListView(
+              children: [
+                const DrawerTitle(),
+                const Text(''),
+                const DrawerTitle(title: '基础标题栏（一)'),
+                const Text(''),
+                const DrawerTitle(type: 2, title: '基础标题栏（二)'),
+                const Text(''),
+                DrawerTitle(
+                  type: 3,
+                  title: '基础标题栏（三）',
+                  onCancel: () {
+                    print('点击了取消按钮');
+                  },
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );

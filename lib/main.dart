@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
         'Layout_components_study': (context) => const LayoutComponents(),
         'container_components_study': (context) =>
             const ContainerComponentStudy(),
+        'scroll_components_study': (context) => const ScrollComponents(),
         'fun_components_study': (context) => const FunComponents(),
         'Widget_ui_demo': (context) => const WidgetUiDemo()
       },
